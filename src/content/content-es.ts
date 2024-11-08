@@ -1,4 +1,4 @@
-import { FAQSPageType, FAQSType } from "./content";
+import type { FAQSPageType, FAQSType } from '../content/content';
 
 export const FAQPage: FAQSPageType = {
     title: "Preguntas Frecuentes de PDFEquips",
