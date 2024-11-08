@@ -1,6 +1,6 @@
 ---
 const { pathname } = Astro.url;
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 let lang = "en";
 let dir = "ltr";
 
@@ -32,12 +32,17 @@ import "./index.scss"
         <meta name="theme-color" content="#FC271C" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/svg+xml" href="/images/icons/logo.svg" />
+        <meta name="description" content={description} />
         <title>{title}</title>
         <slot name="head" />
     </head>
     <body>
         <Navbar client:load path="faq" lang={lang === "en" ? "" : lang} />
-        <slot />
+        <main class="container">
+          <h1 class="text-center">{title}</h1>
+          <p class="text-center lead">{description}</p>
+          <slot />
+        </main>
         <Footer lang={lang === "en" ? "" : lang} title={title} />
     </body>
 </html>
