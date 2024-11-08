@@ -1,0 +1,9 @@
+---
+import BaseLayout from "../BaseLayout.astro";
+import PDFEquipsFAQ from "../PDFEquipsFAQ.tsx";
+import { FAQS } from "../content/content";
+---
+
+<BaseLayout>
+	<PDFEquipsFAQ FAQS={FAQS} client:load />
+</BaseLayout>

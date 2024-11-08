@@ -1,0 +1,30 @@
+@import "pdfequips-navbar/scss/navbar";
+
+body {
+    @include ar-wrapper {
+        text-align: right !important;
+    }
+
+    color: #2C3E50;
+
+    font-family: "Raleway",
+    sans-serif;
+}
+
+main {
+    @include extend("mb-3")
+}
+
+.container {
+    @include extend("container")
+}
+
+.text-center {
+    @include extend("text-center")
+}
+
+.lead {
+    @include extend("lead")
+}
+
+@import "pdfequips-footer/scss/footer";
